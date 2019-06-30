@@ -14,7 +14,7 @@ using namespace std;
 
 int main(){
     using namespace std::chrono;    
-    ifstream file("in_1.dat");
+    ifstream file("../../dat/in_1.dat");
     string str,token;
     string delimiter = "_";
     size_t pos = 0;
@@ -28,17 +28,17 @@ int main(){
         i+=1;
     }
     ofstream myfile;
-    myfile.open ("./verilog_version/out_1.dat");
+    myfile.open ("../../dat/out_1.dat");
     myfile<<"";
     myfile.close();
 
     ofstream myfile2;
-    myfile2.open ("./verilog_version/BinaryInput.dat");
+    myfile2.open ("../../dat/BinaryInput.dat");
     myfile2<<"";
     myfile2.close();
 
     ofstream myfile3;
-    myfile3.open ("./verilog_version/data_size.dat");
+    myfile3.open ("../../dat/data_size.dat");
     myfile3<<"";
     myfile3.close();
 
