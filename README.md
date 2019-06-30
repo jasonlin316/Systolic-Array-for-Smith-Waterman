@@ -6,10 +6,10 @@ Still, the amount of PEs is limited so we need to divide the similarity matrix i
 
 ## Usage
 ### Software Simulation : 
-1. To see one read, simply execute the “demo” program, by typing ./demo in the command line.
-The result will be saved in ans.csv in the verilog code folder.
-2. To execute many read, execute the “goldenDataGenerator”  
-This program will automatically read in all the data saved in in_1.dat and convert them into encoded file and save in BinaryInput.dat.  
+1. To run one read, simply execute the “demo” program, by typing ./demo in the command line.
+The result will be saved in anser.csv in the dat folder.
+2. To execute many read, execute the “GoldenDataGenerator”  
+This program will automatically read in all the data saved in in_1.dat and convert them into encoded file and save in BinaryInput.dat in the dat folder.  
 If you want to test your own DNA sequences, change the contents in in_1.dat .   
 3. To change the scoring criteria of goldenDataGenerator, open Golden.cpp and change line14 ~ line17.  
 After that, type: _g++ -o goldenDataGenerator -O3 generator.cpp Golden.cpp_ to compile. 
