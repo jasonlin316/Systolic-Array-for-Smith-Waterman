@@ -33,7 +33,7 @@ int x,y,biggest=0;
 void printMatrix(vector<vector<int> >& dp) 
 {   
      std::ofstream myfile;
-     myfile.open ("answer.csv");
+     myfile.open ("../dat/answer.csv");
      myfile<<"";
     int ROW = dp.size();
     int COL = dp[0].size();
