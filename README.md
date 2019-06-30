@@ -2,6 +2,7 @@
 This work implements the Smith-Waterman, a dynamic programming algorithm for performing local sequence alignment. The process can be accelerated through parallelism.  
 An architecture called systolic array was implemented to realize parallel computing, resulting the complexity to drop from O(mn) to O(m+n) where m and n is the length of reference genome and short read.By doing so, we decrease the execution time sharply.  
 Still, the amount of PEs is limited so we need to divide the similarity matrix into sub- matrices and finish the calculation in several iteration,resulting a fall in performance.  
+![algo_demo](https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman/blob/master/pic/algo.gif)
 
 ## Usage
 ### Software Simulation : 
@@ -23,8 +24,15 @@ _ncverilog -f run_APR.f_
 Note that you need to open systolic.v and disable “ \`include sram_1024x8_t13.v” first. 
 
 ## Block Diagram
-
+### Architecture
+![Block_diagram](https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman/blob/master/pic/block_diagram.png)
+Since the number of PEs is limited, we need to divide the matrix into sub-matrices to calculate the similarity matrix. In each iteration, the PE array will calculate one sub-matrix, and store the intermediate results in SRAM for the next iteration to use. Both the reference and short read is read in through serial in.  
+### Schematic of the Process Element.   
+![PE_design](https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman/blob/master/pic/PE_design.png)
+The input comes from the last stage of PE, receiveing V and F. The E value is stored in the E-out registerand passed to the next cycle as this PE will be used to calculated the next read.  
+In the end, three value was compared and the biggest of all will be stored in the max-out and passed to the next PE.
 ## Layout
+![layout](https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman/blob/master/pic/layout.png)
 ## Design Specification
 |   Spec   |  Value   |
 |-----------|---|
