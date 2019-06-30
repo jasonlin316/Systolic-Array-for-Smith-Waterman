@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "fstream": "cpp",
+        "chrono": "cpp",
+        "vector": "cpp"
+    }
+}
