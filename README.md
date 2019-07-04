@@ -31,6 +31,10 @@ Since the number of PEs is limited, we need to divide the matrix into sub-matric
 ![PE_design](https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman/blob/master/pic/PE_design.png)
 The input comes from the last stage of PE, receiveing V and F. The E value is stored in the E-out registerand passed to the next cycle as this PE will be used to calculated the next read.  
 In the end, three value was compared and the biggest of all will be stored in the max-out and passed to the next PE.
+
+## Schematic (Gate Level)
+![Design](https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman/blob/master/pic/Schematic.png)
+
 ## Layout
 ![layout](https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman/blob/master/pic/layout.png)
 ## Design Specification
