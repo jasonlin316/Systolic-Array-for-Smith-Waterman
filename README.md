@@ -33,7 +33,8 @@ The input comes from the last stage of PE, receiveing V and F. The E value is st
 In the end, three value was compared and the biggest of all will be stored in the max-out and passed to the next PE.
 
 ## Schematic (Gate Level)
-![Design](https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman/blob/master/pic/Schematic.png)
+![Design](https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman/blob/master/pic/core.png)
+![PEs](https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman/blob/master/pic/PE.png)
 
 ## Layout
 ![layout](https://github.com/jasonlin316/Systolic-Array-for-Smith-Waterman/blob/master/pic/layout.png)
